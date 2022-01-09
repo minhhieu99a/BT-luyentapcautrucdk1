@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 7</title>
+</head>
+<body>
+<input type="text" id="sogiay">
+<button onclick="ketqua4()">Check!</button>
+<p id="hienthi"></p>
+<script>
+    function ketqua4() {
+        let a = Number(document.getElementById("sogiay").value);
+        let b = a * 10;
+        let c = b+ a*15;
+        let d=b+c+a*20;
+        if (a<=0){
+            document.getElementById("hienthi").innerText="Nhập lại"
+        }else if(a<=120){
+            document.getElementById("hienthi").innerText="Số tiền phải đóng là"+" "+b+"VNĐ";
+        }else if(a<=300){
+            document.getElementById("hienthi").innerText="Số tiền phải đóng là"+" "+c+"VNĐ";
+        }else {
+            document.getElementById("hienthi").innerText="Số tiền phải đóng là"+" "+d+"VNĐ";
+        }
+    }
+</script>
+</body>
+</html>

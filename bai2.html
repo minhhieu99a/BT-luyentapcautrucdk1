@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<input id="tuoi">
+<button onclick="ketqua()">Check!</button>
+<p id="hienthi"></p>
+<script>
+    function ketqua() {
+        let a = Number(document.getElementById("tuoi").value);
+        if (a > 0 && a < 16 ){
+            document.getElementById("hienthi").innerText = "Chưa đủ tuổi"
+        }else {
+            document.getElementById("hienthi").innerText = "Đủ tuổi"
+        }
+    }
+</script>
+</body>
+</html>

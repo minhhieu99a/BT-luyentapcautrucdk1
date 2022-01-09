@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 6</title>
+</head>
+<body>
+<input type="text" id="sotien">
+<button onclick="ketqua3()">Check!</button>
+<p id="hienthi"></p>
+<script>
+    function ketqua3(){
+        let a=Number(document.getElementById("sotien").value);
+        let b = a * 0.03
+        let c = a*0.04
+        let d = a*0.05
+        if (a<=0){
+            document.getElementById("hienthi").innerText="Nhập lại"
+        }else if (a<=20000000){
+            document.getElementById("hienthi").innerText="Hoa hồng của bạn là "+" "+b+"VND"
+        } else if (a<=100000000){
+            document.getElementById("hienthi").innerText="Hoa hồng của bạn là "+" "+c+"VND"
+        }else {
+            document.getElementById("hienthi").innerText="Hoa hồng của bạn là "+" "+d+"VND"
+        }
+    }
+</script>
+</body>
+</html>

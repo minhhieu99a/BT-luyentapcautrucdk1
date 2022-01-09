@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai4</title>
+</head>
+<body>
+<input id="Soa">
+<input id="Sob">
+<input id="Soc">
+<button onclick="ketqua2()">Check!</button>
+<p id="solonnhat"></p>
+<script>
+    function ketqua2() {
+        let a = Number(document.getElementById("Soa").value);
+        let b = Number(document.getElementById("Sob").value);
+        let c = Number(document.getElementById("Soc").value);
+        if (a == b && a == c) {
+            document.getElementById("solonnhat").innerText = "Nhập số khác ";
+        } else if (a > b && a > c) {
+            document.getElementById("solonnhat").innerText = "Số lớn nhất là " + " " + a
+        } else if (b > c) {
+            document.getElementById("solonnhat").innerText = "Số lớn nhất là " + " " + b
+        } else {
+            document.getElementById("solonnhat").innerText = "Số lớn nhất là " + " " + c
+        }
+        ;
+    }
+</script>
+</body>
+</html>

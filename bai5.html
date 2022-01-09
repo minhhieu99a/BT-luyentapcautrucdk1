@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai5</title>
+</head>
+<body>
+<input id="diemkiemtra">
+<input id="diemgiuaky">
+<input id="diemcuoiky">
+<button onclick="tinhdiem()">Xét học lực</button>
+<p id="hocluc"></p>
+<script>
+    function tinhdiem() {
+        let a = Number(document.getElementById("diemkiemtra").value);
+        let b = Number(document.getElementById("diemgiuaky").value);
+        let c = Number(document.getElementById("diemcuoiky").value);
+        let d = (a * 0.1) + (b * 0.2) + (c * 0.7)
+        if ((a >= 0 && a <= 10) && (b >= 0 && b <= 10) && (c >= 0 && c <= 10)) {
+            if (d <= 10 && d >= 9) {
+                document.getElementById("hocluc").innerText = "Học lực : Xuất sắc"
+            } else if (d >= 8) {
+                document.getElementById("hocluc").innerText = "Học lực : Giỏi"
+            } else if (d >= 7) {
+                document.getElementById("hocluc").innerText = "Học lực : Khá"
+            } else if (d >= 5) {
+                document.getElementById("hocluc").innerText = "Học lục : Trung Bình"
+            } else if (d >= 4) {
+                document.getElementById("hocluc").innerText = "Học lực : Yếu"
+            } else {
+                document.getElementById("hocluc").innerText = "Đúp"
+            }
+        } else {
+            document.getElementById("hocluc").innerText = "Nhập lại điểm"
+        }
+    }
+</script>
+</body>
+</html>
